@@ -110,10 +110,14 @@ class _NameCardState extends State<NameCard> {
                         ),
                       ],
                     ),
-                    child: const CircleAvatar(
-                      radius: 58,
-                      backgroundImage:
-                          AssetImage('assets/images/imagesam.jpeg'),
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/profile_img.jpeg',
+                        width: 130,
+                        height: 130,
+                        fit: BoxFit.cover,
+                        alignment: Alignment.topCenter, // 👈 Image niche aayegi
+                      ),
                     ),
                   )
                       .animate()

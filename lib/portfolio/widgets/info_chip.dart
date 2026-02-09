@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class _InfoChip extends StatelessWidget {
+class InfoChip extends StatelessWidget {
   final String label;
-  const _InfoChip(this.label);
+  const InfoChip(this.label);
 
   @override
   Widget build(BuildContext context) {

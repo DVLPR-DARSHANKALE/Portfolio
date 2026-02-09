@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:portfolio/portfolio/screens/animatebackground.dart';
 import 'package:portfolio/portfolio/widgets/feature_project_card.dart';
+import 'package:portfolio/portfolio/widgets/info_chip.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../sections/company_apps_carousel.dart';
 
@@ -141,9 +142,9 @@ class _NameCardState extends State<NameCard> {
                           spacing: 10,
                           runSpacing: 8,
                           children: const [
-                            _InfoChip('Flutter Developer'),
-                            _InfoChip('2+ Years Experience'),
-                            _InfoChip('Production Apps'),
+                            InfoChip('Flutter Developer'),
+                            InfoChip('2+ Years Experience'),
+                            InfoChip('Production Apps'),
                           ],
                         ).animate().fadeIn(delay: 280.ms).slideY(begin: 0.15),
 
@@ -251,29 +252,6 @@ class _NameCardState extends State<NameCard> {
 /// =======================
 /// INFO CHIP
 /// =======================
-class _InfoChip extends StatelessWidget {
-  final String label;
-  const _InfoChip(this.label);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.15),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
-      ),
-      child: Text(
-        label,
-        style: const TextStyle(
-          color: Colors.white70,
-          fontSize: 13,
-        ),
-      ),
-    );
-  }
-}
 
 /// =======================
 /// SIDE PROJECTS
